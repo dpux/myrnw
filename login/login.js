@@ -5,8 +5,8 @@ export default class Login extends Component {
     render() {
         return (
           <View style={styles.container}>
-            <Text style={styles.blue}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <Text style={styles.green}>
+                Dummy Text
             </Text>
           </View>
         );
