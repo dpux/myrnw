@@ -4,7 +4,7 @@ import styles from "./login.scss";
 export default class Login extends Component {
     render() {
         return (
-          <View style={styles.container}>
+          <View className={styles.container}>
             <Text style={styles.green}>
                 Dummy Text
             </Text>

@@ -26,21 +26,32 @@ module.exports = {
           plugins: ["react-hot-loader/babel"]
         }
       },
+    //   {
+    //     test: /\.css$/,
+    //     use: [
+    //       {
+    //         loader: "style-loader"
+    //       },
+    //       {
+    //         loader: "css-loader",
+    //         options: {
+    //           modules: true,
+    //           localIdentName: "[path]___[name]__[local]___[hash:base64:5]"
+    //         }
+    //       }
+    //     ]
+    //   },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              localIdentName: "[path]___[name]__[local]___[hash:base64:5]"
-            }
-          }
-        ]
-      }
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
     ]
   },
   resolve: {
